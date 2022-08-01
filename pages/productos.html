@@ -5,31 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/logomyc.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Productos</title>
 </head>
 <body>
     <!---------- Barra de Navegación ---------->
     <header>
-        <div class="bar">
-            <div class="bar__color">
-            </div>
-            <div class="bar__pages">
-                <div class="bar__pages__logo">
-                    <a href="../index.html"><img src="../img/logomyc.png" alt="logomyc"></a>
-                    <a href="../index.html">ESTÉTICA INTEGRAL</a>
-                </div>                
-                <nav>
-                    <ul>
-                        <li><a href="../index.html" class="bar__pages__button">Inicio</a></li>
-                        <li><a href="./tratamientos.html" class="bar__pages__button">Tratamientos</a></li>
-                        <li><a href="./productos.html" class="bar__pages__button">Productos</a></li>
-                        <li><a href="./acercade.html" class="bar__pages__button">Sobre Nosostros</a></li>
-                        <li><a href="./contacto.html" class="bar__pages__button">Contacto</a></li>
+        <div class="bar__color"></div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="nav-logo" href="../index.html"><img src="../img/logomyc.png" alt="logomyc">ESTÉTICA
+                    INTEGRAL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./tratamientos.html">Tratamientos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link actual" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./acercade.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
     <!---------- Main ---------->
     <main class="main-productos">
@@ -61,82 +75,98 @@
         <!-- Cards de productos -->
         <section class="productos">
             <h2 class="subtitulo">Todos los Productos</h2>
-            <div class="productos__grid">
-                <div class="productos__card">
-                    <img src="../img/producto1.jpg" alt="producto1">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°1</h3>
-                        <p>$X.XXX</p>
-                        <a href="" class="productos__button">Comprar</a>
+            <div class="container-fluid">
+                <div class="row m-auto">
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto1.jpg" alt="producto1">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°1</h3>
+                                <p>$X.XXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto2.jpg" alt="producto2">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°2</h3>
+                                <p>$XXXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="productos__card">
-                    <img src="../img/producto2.jpg" alt="producto2">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°2</h3>
-                        <p>$XXXX</p>
-                        <a href="" class="productos__button">Comprar</a>
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto1.jpg" alt="producto1">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°3</h3>
+                                <p>$XXXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto2.jpg" alt="producto2">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°4</h3>
+                                <p>$XXXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="productos__card">
-                    <img src="../img/producto1.jpg" alt="producto1">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°3</h3>
-                        <p>$XXXX</p>
-                        <a href="" class="productos__button">Comprar</a>
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto1.jpg" alt="producto1">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°5</h3>
+                                <p>$XXXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto2.jpg" alt="producto2">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°6</h3>
+                                <p>$XXXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="productos__card">
-                    <img src="../img/producto2.jpg" alt="producto2">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°4</h3>
-                        <p>$XXXX</p>
-                        <a href="" class="productos__button">Comprar</a>
-                    </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
-                    </div>
-                </div>
-                <div class="productos__card">
-                    <img src="../img/producto1.jpg" alt="producto1">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°5</h3>
-                        <p>$XXXX</p>
-                        <a href="" class="productos__button">Comprar</a>
-                    </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
-                    </div>
-                </div>
-                <div class="productos__card">
-                    <img src="../img/producto2.jpg" alt="producto2">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°6</h3>
-                        <p>$XXXX</p>
-                        <a href="" class="productos__button">Comprar</a>
-                    </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
-                    </div>
-                </div>
-                <div class="productos__card">
-                    <img src="../img/producto1.jpg" alt="producto1">
-                    <div class="productos__card__datos">
-                        <h3>Producto N°7</h3>
-                        <p>$XXXX</p>
-                        <a href="" class="productos__button">Comprar</a>
-                    </div>
-                    <div class="productos__stock">
-                        <p>Cant. disponible: 15</p>
+                    <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="productos__card">
+                            <img src="../img/producto1.jpg" alt="producto1">
+                            <div class="productos__card__datos">
+                                <h3>Producto N°7</h3>
+                                <p>$XXXX</p>
+                                <a href="" class="productos__button">Comprar</a>
+                            </div>
+                            <div class="productos__stock">
+                                <p>Cant. disponible: 15</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,5 +184,7 @@
             <a href="https://www.instagram.com/mc_bellezademanos/?hl=es-la" target="_blank">Manicura<img src="../img/instagram.png" alt="instagramlogo"></a>
         </div>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

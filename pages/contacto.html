@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/logomyc.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto</title>
 </head>
+
 <body>
     <!---------- Barra de Navegación ---------->
     <header>
-        <div class="bar">
-            <div class="bar__color">
-            </div>
-            <div class="bar__pages">
-                <div class="bar__pages__logo">
-                    <a href="../index.html"><img src="../img/logomyc.png" alt="logomyc"></a>
-                    <a href="../index.html">ESTÉTICA INTEGRAL</a>
-                </div>                <nav>
-                    <ul>
-                        <li><a href="../index.html" class="bar__pages__button">Inicio</a></li>
-                        <li><a href="./tratamientos.html" class="bar__pages__button">Tratamientos</a></li>
-                        <li><a href="./productos.html" class="bar__pages__button">Productos</a></li>
-                        <li><a href="./acercade.html" class="bar__pages__button">Sobre Nosostros</a></li>
-                        <li><a href="./contacto.html" class="bar__pages__button">Contacto</a></li>
+        <div class="bar__color"></div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="nav-logo" href="../index.html"><img src="../img/logomyc.png" alt="logomyc">ESTÉTICA
+                    INTEGRAL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./tratamientos.html">Tratamientos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./acercade.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link actual" href="./contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
     <!---------- Main ---------->
-    <main >
+    <main>
         <div class="main-contacto">
             <h1 class="titulos">Contactanos</h1>
             <!---------- Iframe y datos de contacto ---------->
             <Section class="contacto-section">
                 <div class="contacto">
                     <div class="contacto__mapa">
-                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.1463086144173!2d-58.57301297075722!3d-34.58935999472542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9cb9acb595b%3A0x3612c383f6cc0f1e!2sManuel%20Quintana%201095%2C%20B1682CCM%20Villa%20Bosch%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1656525031562!5m2!1ses-419!2sar" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="mapa"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.1463086144173!2d-58.57301297075722!3d-34.58935999472542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9cb9acb595b%3A0x3612c383f6cc0f1e!2sManuel%20Quintana%201095%2C%20B1682CCM%20Villa%20Bosch%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1656525031562!5m2!1ses-419!2sar"
+                            width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="contacto__datos">
                         <div>
@@ -48,7 +68,8 @@
                         <div class="contacto__datos__redes">
                             <h2>Dermatocosmiatría</h2>
                             <div>
-                                <a href="https://www.instagram.com/mcestetica_integral/?hl=es-la" target="_blank">mcestetica_integral</a>
+                                <a href="https://www.instagram.com/mcestetica_integral/?hl=es-la" target="_blank"
+                                    title="mcestetica_integral">mcestetica_integral</a>
                                 <div>
                                     <img src="../img/whatsapp.png" alt="whatsapplogo">
                                     <p>01 2345 6789</p>
@@ -58,7 +79,8 @@
                         <div class="contacto__datos__redes">
                             <h2>Manicura</h2>
                             <div>
-                                <a href="https://www.instagram.com/mc_bellezademanos/?hl=es-la" target="_blank">mc_bellezademanos</a>
+                                <a href="https://www.instagram.com/mc_bellezademanos/?hl=es-la" target="_blank"
+                                    title="mc_bellezademanos">mc_bellezademanos</a>
                                 <div>
                                     <img src="../img/whatsapp.png" alt="whatsapplogo">
                                     <p>01 2345 6789</p>
@@ -72,26 +94,42 @@
             <section class="formulario">
                 <h2>También podes escribirnos tu mensaje!</h2>
                 <hr>
-                <form action="">
-                    <div class="formulario__input">
-                        <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
-                        <input type="email" name="email" placeholder="Tu email" required>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Su Nombre y Apellido" required>
                     </div>
-                    <div class="formulario__textarea">
-                        <textarea name="mensaje" id="" cols="45" rows="10" placeholder="Tu Mensaje" required></textarea>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Su Email" required>
                     </div>
-                    <button class="formulario__button">Enviar</button>
-                    </form>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Su mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Su mensaje" required></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Suscribirse a nuestro boletín informativo</label>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
             </section>
         </div>
     </main>
     <!---------- Pie de Página ---------->
     <footer>
         <p>¡Seguinos en Instagram!</p>
-        <div>    
-            <a href="https://www.instagram.com/mcestetica_integral/?hl=es-la" target="_blank">Dermatocosmiatría<img src="../img/instagram.png" alt="instagramlogo"></a>
-            <a href="https://www.instagram.com/mc_bellezademanos/?hl=es-la" target="_blank">Manicura<img src="../img/instagram.png" alt="instagramlogo"></a>
+        <div>
+            <a href="https://www.instagram.com/mcestetica_integral/?hl=es-la" target="_blank">Dermatocosmiatría<img
+                    src="../img/instagram.png" alt="instagramlogo"></a>
+            <a href="https://www.instagram.com/mc_bellezademanos/?hl=es-la" target="_blank">Manicura<img
+                    src="../img/instagram.png" alt="instagramlogo"></a>
         </div>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
