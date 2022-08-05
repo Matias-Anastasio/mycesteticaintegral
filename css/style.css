@@ -12,6 +12,7 @@ body{
     background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
 }
 
+
 /* --------------- HEADER --------------- */
 
 .bar__color{
@@ -92,6 +93,10 @@ header{
     box-shadow: 0 1px 10px #777;
 }
 
+*::selection{
+    background-color: #f8ac9f;
+    color: white;
+}
 
 /* --------------- MAIN --------------- */
 
@@ -116,6 +121,8 @@ header{
 .hero h1{
     margin-bottom: 30px;
     font-size: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__button{
@@ -382,6 +389,9 @@ header{
     margin-bottom: 12px;
 }
 
+.productos .container-fluid{
+    padding: 0 50px;
+}
 
 .productos__card__datos{
     padding: 20px;
@@ -526,11 +536,12 @@ header{
     flex-wrap: wrap;
 }
 
-.contacto__datos__redes a{
+.contacto-ig{
     padding-left: 46px;
+    width: 220px;
     height: 36px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-right: 30px;
     text-decoration: none;
@@ -543,9 +554,33 @@ header{
     transition: 0.25s;
 }
 
-.contacto__datos__redes a:hover{
+.contacto-ig:hover{
     background-image: url(../img/cinstagram.png);
     text-shadow:  0 0 1px black;
+    color: black;
+}
+
+.contacto-wp{
+    padding-left: 46px;
+    height: 36px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    background-image: url(../img/whatsapp.png);
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: auto;
+    transition: 0.25s;
+}
+
+.contacto-wp:hover{
+    background-image: url(../img/cwhatsapp.png);
+    text-shadow:  0 0 1px black;
+    color: black;
 }
 
 .contacto__datos p{
@@ -726,6 +761,9 @@ footer > div{
     .actual::before{
         width: 0;
     }
+    .productos .container-fluid{
+        padding: 0 12px;
+    }
 }
 
 @media screen and (max-width:950px){
@@ -843,5 +881,39 @@ footer > div{
     }
     .formulario h2{
         font-size: 20px;
+    }
+}
+
+@media screen and (max-height:420px){
+    header{
+        position: static;
+    }
+    /* index.html */
+    .hero h1{
+        font-size: 48px;
+    }
+    .hero{
+        height: 70vh;
+    }
+    .hero__button{
+        padding: 10px;
+    }
+    /* tratamientos.html */
+    .tratamiento__card{
+        width: 90%;
+        flex-direction: row;
+        height: fit-content;
+        padding: 0;
+    }
+    .tratamiento__card .carousel{
+        width: 250%;
+    }
+    /* acercade.html */
+    .acercade{
+        height: 90vh;
+    }
+    .footer-index{
+        position: static;
+        background-color: #78534D;
     }
 }
