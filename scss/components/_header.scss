@@ -1,0 +1,76 @@
+@import "../base/variables";
+
+header{
+    position: sticky;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 1px 10px #777;
+    .bar__color{
+        background-color: $main_color;
+        height: 20px;
+    }
+    nav{
+        background: white;    
+        div{
+            .nav-logo{
+                color: $main_color;
+                text-decoration: none;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                &:hover{
+                    color: $main_color;
+                }
+                img{
+                    width: 60px;
+                    margin-right: 10px;
+                }
+            }
+            div{
+                ul{
+                    li{
+                        .nav-link{
+                            color: $main_color;
+                            font-size: 18px;
+                            margin: 0 5px;
+                            font-weight: 300;
+                            position: relative;
+                            padding: 0 0;
+                            &::before{
+                                content: "";
+                                border-bottom: 1px solid $main_color;
+                                width: 0;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                transition: .2s;
+                            }
+                            &:hover::before{
+                                width: 100%;
+                            }
+                            &:hover{
+                                color: $main_color;
+                                text-shadow: 0 0 1px $main_color;
+                            }
+                        }
+                        .actual{
+                            font-weight: 400;
+                            position: relative;
+                            text-shadow: 0 0 1px $main_color;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                border-bottom: 1px solid $main_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

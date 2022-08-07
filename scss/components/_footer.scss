@@ -1,0 +1,46 @@
+@import "../base/variables";
+
+footer{
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) $main_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    > p{
+        margin: 10px 0;
+    }
+    > div{
+        width: 510px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0px 8px 0px;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            margin-right: 50px;
+            transition: 0.25s;
+            &:hover{
+                transform: scale(1.05);
+                color: white;
+            }
+            img{
+                height: 30px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.footer-index {
+    background: linear-gradient(rgba(5,5,5,0.50), rgba(5,5,5,0.50));
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
