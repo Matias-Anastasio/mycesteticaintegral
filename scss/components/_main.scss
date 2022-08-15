@@ -1,11 +1,14 @@
 @import "../base/variables";
+@import "../base/maps";
+@import "../base/extends";
+@import "../base/mixins";
 
 // ----- index.html -----
 
 main{
     .hero{
         width: 100%;
-        height: 90vh;
+        height: calc(100vh - 96px);
         background-image: linear-gradient(rgba(5,7,12,0.35), rgba(5,7,12,0.35)), url(../img/fondo.jpg);
         background-position: center;
         background-size: cover;
@@ -13,9 +16,7 @@ main{
         background-attachment: fixed;
         color: white;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %flex;
         flex-direction: column;
         h1{
             margin-bottom: 30px;
@@ -52,20 +53,16 @@ main{
             opacity: 0.6;
         }
     > div{
-        display: flex;
+        @extend %flex;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         .tratamiento__card{
             width: 400px;
             height: 500px;
             margin: 20px;
             font-weight: 300;
             color: #333;
-            display: flex;
+            @include flex (flex, flex-start, center);
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
             overflow: hidden;
             padding-bottom: 15px;
             border: 1px solid rgb(199, 199, 199);
@@ -84,7 +81,7 @@ main{
                     margin-bottom: 10px;
                 }
                 p{
-                    font-size: 200;
+                    font-weight: 300;
                 }
             }
         }
@@ -95,9 +92,8 @@ main{
 // ----- productos.html -----
 
 .main-productos{
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    @extend %flex;
     .ofertas{
         width: 100%;
         margin-top: 50px;
@@ -105,14 +101,12 @@ main{
             margin-left: 10%;
         }
         > div{
-            display: flex;
-            justify-content: center;
+            @extend %flex;
             flex-wrap: wrap;
             .ofertas__card{
                 width: 700px;
                 background-color: white;
-                display: flex;
-                justify-content: space-between;
+                @include flex (flex, space-between, center);
                 margin: 20px;
                 border: 1px solid rgb(199, 199, 199);
                 box-shadow: 3px 5px 5px gainsboro;
@@ -123,9 +117,8 @@ main{
                     box-shadow: 0 0 10px #777;
                 }
                 div{
-                    display: flex;
+                    @include flex (flex, center, center);
                     flex-direction: column;
-                    justify-content: center;
                     padding: 30px;
                     h3{
                         font-size: 25px;
@@ -141,18 +134,18 @@ main{
                     }
                     .ofertas__button{
                         text-decoration: none;
-                        color:$btn_color;
+                        color: map-get($button , color);
                         font-weight: 600;
-                        background-color: white;
+                        background-color: map-get($button, bg-color);
                         padding: 10px;
                         margin-top: 30px;
                         align-self: center;
                         opacity: 0.85;
                         transition: 0.25s;
-                        border: 2px solid $btn_color;
+                        border: map-get($button, border);
                         &:hover{
-                            color: white;
-                            background-color: $btn_color;
+                            color: map-get($button, color-hover);
+                            background-color: map-get($button, bg-hover);
                             box-shadow: 0 0 5px $btn_color;
                         }
                     }
@@ -165,9 +158,8 @@ main{
     }
     .productos{
         margin: 50px 0;
-        display: flex;
+        @extend %flex;
         flex-direction: column;
-        align-items: center;
         h2{
             align-self: flex-start;
             margin-bottom: 50px;
@@ -213,18 +205,18 @@ main{
                             }
                             .productos__button{
                                 text-decoration: none;
-                                color:$btn_color;
+                                color: map-get($button, color);
                                 font-weight: 600;
-                                background-color: white;
-                                border: 2px solid $btn_color;
+                                background-color: map-get($button, bg-color);
+                                border: map-get($button, border);
                                 padding: 10px;
                                 margin-top: 20px;
                                 align-self: center;
                                 opacity: 0.85;
                                 transition: 0.25s;
                                 &:hover{
-                                    color: white;
-                                    background-color: $btn_color;
+                                    color: map-get($button, color-hover);
+                                    background-color: map-get($button, bg-hover);
                                     box-shadow: 0 0 5px $btn_color;
                                 }
                             }
@@ -233,10 +225,9 @@ main{
                             width: 100%;
                             height: 36px;
                             border-top: 1px solid rgb(199, 199, 199);
-                            display: flex;
-                            justify-content: center;
+                            @extend %flex;
                             p{
-                                align-self: center;
+                                // align-self: center;
                                 color: #888;
                                 font-size: 14px;
                                 margin: auto;
@@ -256,10 +247,9 @@ main{
 
 main{
     .acercade{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %flex;
         padding: 100px;
+        height: calc(100vh - 181.5px);
         #carouselExampleFade-bio{
             width: 155%;
         }
@@ -285,23 +275,18 @@ main{
 
 main{
     .main-contacto{
-        display: flex;
+        @extend %flex;
         flex-direction: column;
-        align-items: center;
         .contacto-section{
             width: 1250px;
             height: 525px;
             background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex;
             box-shadow: 3px 5px 5px -2px #888;
             margin: 40px 0 80px 0;
             border-radius: 4px;
             .contacto{
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
+                @include flex (flex, space-evenly,center);
                 background-color: white;
                 width: 1200px;
                 height: 475px;
@@ -325,10 +310,8 @@ main{
                         }
                     }
                     .contacto__datos__redes{
-                        display: flex;
+                        @include flex (flex, flex-start, center);
                         flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: center;
                         h2{
                             align-self: flex-start;
                             margin: 40px 0 10px 0;
@@ -337,17 +320,13 @@ main{
                             font-weight: 400;
                         }
                         div{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @extend %flex;
                             flex-wrap: wrap;
                             .contacto-ig{
                                 padding-left: 46px;
                                 width: 220px;
                                 height: 36px;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                                @include flex (flex, flex-start, center);
                                 margin-right: 30px;
                                 text-decoration: none;
                                 font-size: 16px;

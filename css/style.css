@@ -102,9 +102,14 @@ header {
         width: 100%;
         border-bottom: 1px solid #f8ac9f; }
 
+main .hero, main .tratamiento > div, .main-productos, .main-productos .ofertas > div, .main-productos .productos, .main-productos .productos .container-fluid .row div .productos__card .productos__stock, main .acercade, main .main-contacto, main .main-contacto .contacto-section, main .main-contacto .contacto-section .contacto .contacto__datos .contacto__datos__redes div {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 main .hero {
   width: 100%;
-  height: 90vh;
+  height: calc(100vh - 96px);
   background-image: linear-gradient(rgba(5, 7, 12, 0.35), rgba(5, 7, 12, 0.35)), url(../img/fondo.jpg);
   background-position: center;
   background-size: cover;
@@ -112,9 +117,6 @@ main .hero {
   background-attachment: fixed;
   color: white;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column; }
   main .hero h1 {
     margin-bottom: 30px;
@@ -142,10 +144,7 @@ main .tratamiento {
     margin: 5px 15px 10px 15px;
     opacity: 0.6; }
   main .tratamiento > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; }
+    flex-wrap: wrap; }
     main .tratamiento > div .tratamiento__card {
       width: 400px;
       height: 500px;
@@ -153,9 +152,9 @@ main .tratamiento {
       font-weight: 300;
       color: #333;
       display: flex;
-      flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+      flex-direction: column;
       overflow: hidden;
       padding-bottom: 15px;
       border: 1px solid #c7c7c7;
@@ -172,26 +171,23 @@ main .tratamiento {
           font-style: italic;
           margin-bottom: 10px; }
         main .tratamiento > div .tratamiento__card .tratamiento__card__texto p {
-          font-size: 200; }
+          font-weight: 300; }
 
 .main-productos {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
   .main-productos .ofertas {
     width: 100%;
     margin-top: 50px; }
     .main-productos .ofertas h2 {
       margin-left: 10%; }
     .main-productos .ofertas > div {
-      display: flex;
-      justify-content: center;
       flex-wrap: wrap; }
       .main-productos .ofertas > div .ofertas__card {
         width: 700px;
         background-color: white;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 20px;
         border: 1px solid #c7c7c7;
         box-shadow: 3px 5px 5px gainsboro;
@@ -202,8 +198,9 @@ main .tratamiento {
           box-shadow: 0 0 10px #777; }
         .main-productos .ofertas > div .ofertas__card div {
           display: flex;
-          flex-direction: column;
           justify-content: center;
+          align-items: center;
+          flex-direction: column;
           padding: 30px; }
           .main-productos .ofertas > div .ofertas__card div h3 {
             font-size: 25px;
@@ -234,9 +231,7 @@ main .tratamiento {
           width: 400px; }
   .main-productos .productos {
     margin: 50px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
+    flex-direction: column; }
     .main-productos .productos h2 {
       align-self: flex-start;
       margin-bottom: 50px; }
@@ -291,11 +286,8 @@ main .tratamiento {
         .main-productos .productos .container-fluid .row div .productos__card .productos__stock {
           width: 100%;
           height: 36px;
-          border-top: 1px solid #c7c7c7;
-          display: flex;
-          justify-content: center; }
+          border-top: 1px solid #c7c7c7; }
           .main-productos .productos .container-fluid .row div .productos__card .productos__stock p {
-            align-self: center;
             color: #888;
             font-size: 14px;
             margin: auto; }
@@ -303,10 +295,8 @@ main .tratamiento {
           box-shadow: 0 0 10px #777; }
 
 main .acercade {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px; }
+  padding: 100px;
+  height: calc(100vh - 181.5px); }
   main .acercade #carouselExampleFade-bio {
     width: 155%; }
   main .acercade .acercade-texto {
@@ -323,16 +313,11 @@ main .acercade {
       margin: 20px 0 20px 0; }
 
 main .main-contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
   main .main-contacto .contacto-section {
     width: 1250px;
     height: 525px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: 3px 5px 5px -2px #888;
     margin: 40px 0 80px 0;
     border-radius: 4px; }
@@ -361,9 +346,9 @@ main .main-contacto {
             margin: 0; }
         main .main-contacto .contacto-section .contacto .contacto__datos .contacto__datos__redes {
           display: flex;
-          flex-direction: column;
           justify-content: flex-start;
-          align-items: center; }
+          align-items: center;
+          flex-direction: column; }
           main .main-contacto .contacto-section .contacto .contacto__datos .contacto__datos__redes h2 {
             align-self: flex-start;
             margin: 40px 0 10px 0;
@@ -371,9 +356,6 @@ main .main-contacto {
             font-style: italic;
             font-weight: 400; }
           main .main-contacto .contacto-section .contacto .contacto__datos .contacto__datos__redes div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             flex-wrap: wrap; }
             main .main-contacto .contacto-section .contacto .contacto__datos .contacto__datos__redes div .contacto-ig {
               padding-left: 46px;
@@ -503,7 +485,6 @@ footer {
 
 @media screen and (max-width: 1200px) {
   main .acercade {
-    height: 60vh;
     background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../img/bio1.jpg);
     background-position: center;
     background-size: cover;
@@ -591,6 +572,10 @@ footer {
     flex-direction: column-reverse; }
     .main-productos .ofertas div .ofertas__card img {
       width: 100%; }
+  main .acercade {
+    height: calc(100vh - 231.5px); }
+  main .hero .hero__button {
+    margin-bottom: 100px; }
   footer > div {
     width: 85%;
     flex-direction: column;
@@ -616,7 +601,8 @@ footer {
     main .hero h1 {
       font-size: 48px; }
     main .hero .hero__button {
-      padding: 10px; }
+      padding: 10px;
+      margin: 0; }
   /* tratamientos.html */
   main .tratamiento div .tratamiento__card {
     width: 90%;

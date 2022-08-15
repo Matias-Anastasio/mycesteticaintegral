@@ -13,7 +13,7 @@ body{
 }
 
 *::selection{
-    background-color: #f8ac9f;
+    background-color: $main_color;
     color: white;
 }
 
@@ -22,7 +22,7 @@ body{
     font-size: 46px;
     margin: 30px;
     /* font-style: italic; */
-    color: #f8ac9f;
+    color: $main_color;
     font-weight: 500;
     text-shadow: 1px 1px 1px #888;
 }
@@ -30,7 +30,7 @@ body{
 .subtitulo{
     font-size: 25px;
     margin-left: 15px;
-    color: #f8ac9f;
+    color: $main_color;
     text-shadow: 1px 1px 1px #888;
 }
 
