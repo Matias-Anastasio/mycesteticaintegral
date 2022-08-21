@@ -53,7 +53,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             padding: 50px;
-            #carouselExampleFade-bio{
+            .acercade-grid{
                 display: none;
             }
             .acercade-texto{
@@ -125,6 +125,7 @@
                 .ofertas__card{
                     width: 500px;
                     div{
+                        padding: 20px;
                         h3{
                             font-size: 18px;
                         }
@@ -193,7 +194,7 @@
     }
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width:574px){
     .main-productos{
         .productos{
             .container-fluid{
@@ -261,7 +262,15 @@
         }
     }
     main{
+        .tratamiento{
+            div{
+                .tratamiento__card{
+                    height: fit-content;
+                }
+            }
+        }
         .acercade{
+            height: fit-content;
             .acercade-texto{
                 h1{
                     font-size: 32px;
@@ -274,6 +283,28 @@
             font-size: 20px;
         }
     }
+    .main-productos{
+        .ofertas{
+            div{
+                .ofertas__card{
+                    width: 100%;
+                }
+            }
+        }
+        .productos{
+            .container-fluid{
+                padding: 0;
+                .row{
+                    div{
+                        .productos__card{
+                            width: 85%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 @media screen and (max-height:420px){

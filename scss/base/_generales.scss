@@ -27,6 +27,17 @@ body{
     text-shadow: 1px 1px 1px #888;
 }
 
+#arriba, #top{
+    width: 100%;
+    &::before{
+        display: block;
+        content: " ";
+        margin-top: -96px;
+        height: 96px;
+        visibility: hidden;
+    }
+}
+
 .subtitulo{
     font-size: 25px;
     margin-left: 15px;
